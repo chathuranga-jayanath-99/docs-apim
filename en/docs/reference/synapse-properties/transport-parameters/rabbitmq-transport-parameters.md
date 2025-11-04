@@ -406,6 +406,8 @@ In your integration solution, the following RabbitMQ send parameters can be spec
 rabbitmq:/<placeholder>?<query-parameter-name1>=<query-parameter-value1>&amp;<query-parameter-name2>=<query-parameter-value2>
 ```
 
+The <code>placeholder</code> parameter specifies the routing key to use when both the <code>rabbitmq.queue.name</code> and <code>rabbitmq.queue.routing.key</code> query parameters are not defined. Otherwise, it serves as a placeholder.
+
 **Example**:
 
 -   Design view of an address endpoint in WSO2 Integration Studio:
@@ -423,16 +425,12 @@ rabbitmq:/<placeholder>?<query-parameter-name1>=<query-parameter-value1>&amp;<qu
     </endpoint>
     ```
 
-### Parameters
+### Query Parameters
 
 <table>
   <tr>
-    <th>Parameter</th>
+    <th>Query Parameter</th>
     <th>Description</th>
-  </tr>
-  <tr>
-    <td>placeholder</td>
-    <td>Specifies the routing key to use when both <code>rabbitmq.queue.name</code> and <code>rabbitmq.queue.routing.key</code> query parameters are not defined. Otherwise, it serves as a placeholder.</td>
   </tr>
   <tr>
     <td>rabbitmq.server.host.name</td>
